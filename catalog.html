@@ -1,0 +1,109 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+	<title>Metro Allure</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="css/styles.css" /> 
+	<script type="text/javascript" src="//use.typekit.net/bad3cat.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+
+<body id="catalog">
+<div id="wrapper">
+		
+    
+		<header>
+       		<img src="img/logo.png" width="125" height="75" alt="logo" id="logo" />
+  				<div class="social">
+            		<img src="img/shopping-bag.png" alt="shopping bag">
+            		<a href="#"><img src="img/cart.png" alt="cart"></a>
+                	<img src="img/searchwithicon.png" alt="search">
+                	<a href="www.twitter.com"><img src="img/twitter.png" alt="twitter"></a>
+                	<a href="www.facebook.com"><img src="img/fb.png" alt= "facebook"></a>
+                	<a href="#"><img src="img/rss.png" alt="rss"></a>
+            	</div>
+		  
+          <nav>
+        		<ul>
+    				<li><a href="index.html" id="homeLink">Home</a></li>
+    				<li><a href="dresses.html" id="dressesLink">Dresses</a></li>
+                	<li><a href="sales.html" id="salesLink">Sales</a></li>
+    				<li><a href="info.html" id="infoLink">Product Info</a></li>
+    				<li><a href="catalog.html" id="catalogLink">Catalog</a></li>
+    				<li><a href="contact.html" id="contactLink">Contact</a></li>
+  				</ul>
+                
+        	</nav>
+		</header>
+  
+  
+<div id="mainWrapper">
+ 			<script type="text/javascript">
+ 				function Dresses(designer, dress_country, dress_fabric, dress_size, dress_price) {
+  					//this.image = image;
+  					this.designer = designer;
+  					this.made = dress_country;
+  					this.fabric = dress_fabric;
+  					this.size = dress_size;
+  					this.price = dress_price;
+  					this.display = displayDresses;
+  				};
+  			
+  				function displayDresses() {
+  					document.write('<td>' + this.designer + '</td>');
+  					document.write('<td>' + this.made + '</td>');  					
+  					document.write('<td>' + this.fabric + '</td>');
+  					document.write('<td>' + this.size + '</td>');
+  					document.write('<td>' + this.price + '</td><tr>');
+  				}; 
+  				
+ 				var dress1 = new Dresses('Valentino', 'Italy', 'rayon','L', '$5,085');
+ 				var dress2 = new Dresses('Dolce & Gabbana', 'Italy', 'Jacquard Wool Blend','M', '$3,275');
+ 				var dress3 = new Dresses('Versace', 'China', 'silk &amp; chiffon','S', '$4,165');
+ 				
+ 				var dress4 = new Dresses('Calvin Klein', 'Japan', 'silk','S', '$1,590');
+ 				var dress5 = new Dresses('Gucci', 'Vietnam', 'cotton','L', '$1,285');
+ 				var dress6 = new Dresses('Narciso Rodriguez', 'Italy', 'silk Charmeuse','M', '$1,625');
+ 				
+				var evening = Array (dress1, dress2, dress3);
+ 				var day = Array (dress4, dress5, dress6);
+ 				var dressNames = Array ('Evening', 'Day');
+ 				var inventory = Array (evening, day);
+ 				var description = Array ('Designer', 'Made in', 'Fabric', 'Size', 'Price');
+ 				
+ 				
+ 				
+				document.write('<table class="catalog"><caption> Catalog </caption><tr><th></th>');
+					for (i=0; i<description.length; i++) {
+						document.write('<th>' + description[i] + '</th>');
+					}
+					for (k=0; k<dressNames.length; k++) {
+				document.write('<tr><th>' + dressNames[k] + '</th>');
+					for (l=0; l<evening.length; l++) {
+							if (l>0) 
+						{
+						document.write('<th></th>')
+						}
+						inventory[k][l].display();
+					}
+				document.write('</tr>');
+					}	
+ 				document.write('<table>')
+
+ 			</script>
+ 			
+			
+ 
+	</div>
+<footer>
+			<p> © 2012 Metro Allure  • All Rights Reserved 
+			1.800.235.7615    2166 California Dr., CA 96351 1.800.235.7615 </p>                                    
+		</footer>
+  		<!-- end of main --> 
+  		
+</div>
+		
+<!-- end of wrapper -->
+</body>
+</html>

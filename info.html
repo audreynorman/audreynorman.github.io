@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Metro Allure</title>
+		<link rel="stylesheet" href="css/styles.css" />
+		<script type="text/javascript" src="//use.typekit.net/bad3cat.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	</head>
+
+	<body id="info">
+		<div id="wrapper">
+		
+    
+		<header>
+       		<img src="img/logo.png" width="125" height="75" alt="logo" id="logo" />
+  				<div class="social">
+            		<img src="img/shopping-bag.png" alt="shopping bag">
+            		<a href="#"><img src="img/cart.png" alt="cart"></a>
+                	<img src="img/searchwithicon.png" alt="search">
+                	<a href="http://www.twitter.com"><img src="img/twitter.png" alt="twitter"></a>
+                	<a href="http://www.facebook.com"><img src="img/fb.png" alt= "facebook"></a>
+                	<a href="#"><img src="img/rss.png" alt="rss"></a>
+            	</div>
+		  
+		  <nav>
+        		<ul>
+    				<li><a href="index.html" id="homeLink">Home</a></li>
+    				<li><a href="dresses.html" id="dressesLink">Dresses</a></li>
+                	<li><a href="sales.html" id="salesLink">Sales</a></li>
+    				<li><a href="info.html" id="infoLink">Product Info</a></li>
+    				<li><a href="contact.html" id="contactLink">Contact</a></li>
+  				</ul>
+                
+        	</nav>
+		</header>
+		
+		
+	<div id="mainWrapper">
+		<script type="text/javascript">
+			var x = prompt('Please enter your first name:');
+			var y = prompt('Please enter your last name:');
+			document.write('<h4 style= "padding-left:25em"><em>You\'ve come to the right place ', x, ' ', y,'</em></h4>');		
+			var y = prompt('\tHow can we help you?\n\n1. How to dress for a cocktail Party.\n2. How to accessorize your dress.');		
+			switch(y) {
+			case "1":
+				document.write('<div class="info">');
+				cocktail();	
+				document.write('<h4>Dressing right for different occasions is very important if you want to be taken seriously. A cocktail reception is a party where guests are provided with refreshments rather than full sit-down dinner. Cocktail parties can be small informal weddings or corporal events, a book launch or a boutique opening. While cocktail party is not a black tie event with the strictest dressing rules it is not a casual dress event either.<br><br>So, here are the rules you have to follow to look great at a cocktail party:</h4>');
+				document.write('<ul><li> Put on a cocktail dress which is chic and elegant. The length of a cocktail dress normally ranges from a few inches above the ankles to above the knees. Forget about dresses which give you too much exposure. Try to choose something appropriate.</li>');
+				document.write('<br><li> Wear dress shoes. Heels are the best option but flats are acceptable, too. Think of comfort, cocktail party is usually long and you will have to be on your feet all the time. </li>');
+				document.write('<br><li> Pay attention to styling. Spend extra time on your hair, nails and makeup.<br> Messy look is not a good idea for a cocktail party. Having these simple rules in mind you will look perfect at a cocktail party.</li></ul>');
+				document.write('<div class="article" style="padding-left:6em"><br><br><br><br><em>Courtesy of <a href="http://www.millionlooks.com/style-secrets/how-to-dress-for-cocktail-party/"> Million Looks</em></a></div>')
+				document.write('</div>');
+				break;
+			case "2":
+				document.write('<div class="info">');
+				accessory();
+				document.write('<h4>A cocktail dress is the perfect formal party attire for a woman. And with some jewelry and other accessories, the dress will look even better. Here are some tips to help you accessorize a cocktail dress for your next evening out.</h4>');
+				document.write('<ul><li>Add some eye candy. Opt for jewelry that flatters your dress but don’t overdo: one or two items will be enough.  A diamond or pearl tennis bracelet adds just the right amount of sparkle to your wrist, so if you have one that matches your earrings, it\'s a good choice.</li>')
+				document.write('<br><li>Don’t forget about a good purse, it is essential to carry it while holding a drink. Just a small one will do, big enough to fit your lipstick and a tissue and a few other personal items. Again, try to stick with the theme of your other accessories. If you\'re wearing lots of beads, look for a beaded clutch purse to go with your ensemble. On the other hand, a sleek black clutch purse with just a few rhinestones on it will go great with your gemstone jewelry. Avoid anything with a strap. You want your cocktail dress and accessories to look classy. </li>');
+				document.write('<br><li>Wear dress shoes. Heels are the best option but flats are acceptable, too.  Choose a pair of shoes that have an open-toe and lots of straps. This type of shoe / sandal works for most occasions. Avoid anything that goes too high up your leg, or has too many embellishments on it. Think of comfort, cocktail party is usually long and you will have to be on your feet all the time. </li></ul>');
+				document.write('<div class="article" style="padding-left:6em"><br><br><br><em>Courtesy of <a href="http://www.howtodothings.com">How to do things</em></a></div>');
+				document.write('</div>');
+				break;
+			default:
+				document.write('<div class="info" style="text-align: center">Sorry.<br>You did not select an <em>option</em>. <br>Please try again.</div>');
+				break;
+			}
+			
+			function Product(product_image, product_info){
+				this.image = product_image;
+				this.info = product_info;
+				this.display = function()
+				{
+				document.write('<img src="', this.image,'"/><h1>', this.info, '</h1>' );
+				}
+			}
+			
+			function cocktail(){
+			var option = new Product('img/blake-lively-vogue.jpg', '<h1>Be the life of the party!</h1>');
+			option.display();
+			}
+			
+			function accessory(){ 
+			var option = new Product('img/jewelry.jpg', '<h1>Accessorize your attire.</h1>');
+			option.display();
+			}
+		</script>
+        
+            
+    </div>
+            
+
+			<footer>
+				<p> © 2012 Metro Allure  • All Rights Reserved 
+				1.800.235.7615    2166 California Dr., CA 96351 1.800.235.7615 
+            	</p>                                    
+			</footer>	 
+		</div>
+	</body>
+</html>
